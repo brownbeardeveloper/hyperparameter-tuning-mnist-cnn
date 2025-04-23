@@ -1,7 +1,9 @@
 # hyperparameter-tuning-mnist-cnn
 
-This repository contains a hyperparameter tuning experiment for a Convolutional Neural Network (CNN) trained on the MNIST dataset.
+This project is about tuning hyperparameters for a Convolutional Neural Network (CNN) trained on the MNIST dataset.
 
-Following an initial grid search (1 epoch per configuration), the top 5 parameter sets were selected based on validation accuracy. Each of these is now trained for 100 epochs to benchmark long-term performance and stability.
+I started with a grid search, testing 128 different parameter combinations. Each one was trained for just 1 epoch because of limited compute. Then I picked the top 5 setups based on validation accuracy.
 
-This is my first machine learning project, and I found it interesting to explore how tuning parameters can significantly impact model performance. Due to limited compute resources, I ran only 1 epoch for each of the 128 different parameter combinations, and then selected the top 5 for full training.
+These top 5 models are now trained longer, but not for a fixed number of epochs. Training stops if the model doesn't improve for 5 epochs in a row.
+
+This is my first machine learning project, and it’s been interesting to see how much tuning can affect performance.
